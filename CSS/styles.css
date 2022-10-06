@@ -1,3 +1,51 @@
-.carousel {
-  background-color: black;
+.product>img{
+    width:200px;
+    height:200px;
+}
+.product-card{
+    width:200px;
+    height:200px;
+}
+.product-card>img{
+    width:200px;
+    height:200px;
+}
+/*
+.card-deck{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+*/
+.featured-cards>.col{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.featured-products-heading{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.inventory{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.inventory-cards{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.categories{
+    display:inline-block;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100px; /* Set the width of the sidebar */
+    position: sticky; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 20px; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
 }
