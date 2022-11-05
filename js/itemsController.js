@@ -1,4 +1,4 @@
-class ProductsController{
+export class ProductsController{
     constructor(currentId = 0){
         this._products = [];
         this._currentId = currentId;
@@ -20,7 +20,7 @@ class ProductsController{
         this._products.push(item);
     }
     loadItemsFromLocalStorage() {
-        const storageItems = localStorage.getItem("products");
+        const storageItems = localStorage.getItem('products');
         if (storageItems) {
             const items = JSON.parse(storageItems);
             //TODO load the items into the local items structure (this.items)   
@@ -32,3 +32,6 @@ class ProductsController{
     }
  
 }
+
+
+
