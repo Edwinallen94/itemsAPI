@@ -1,3 +1,4 @@
+import {ProductsController} from "./itemsController.js";
 const productsController = new ProductsController(0);
 
 
@@ -5,7 +6,7 @@ function addItemCard(item) {
   const itemHTML =
   `<div class="card h-100 product-card">
   <img
-    src= ${item.imageURL}
+    src= ${item.imageUrl}
     class="card-img-top"
   />
   <div class="card-body">
@@ -21,8 +22,6 @@ function addItemCard(item) {
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.innerHTML += itemHTML;
 }
-
-
 
 
 function loadStorageSampleData(){
@@ -52,6 +51,7 @@ function loadCardsListFromProductController(){
 }
 
 productsController.loadItemsFromLocalStorage;
+loadStorageSampleData();
 loadCardsListFromProductController();
 
 
@@ -59,8 +59,8 @@ loadCardsListFromProductController();
 
 
 /*
-function addItemCard(item){
-  for(let i = 0; i < json.productsController.products.length; i++ )
+function createDoms(){
+  for(let i = 0; i < productsController.products.length; i++ )
   {
       const addcard = document.createElement("div");
       addcard.setAttribute('class','card h-100 product-card');
@@ -93,6 +93,9 @@ function addItemCard(item){
   }
 }
 */
+
+
+
 
 
 
