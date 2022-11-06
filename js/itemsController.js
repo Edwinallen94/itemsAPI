@@ -1,6 +1,7 @@
 export class ProductsController{
     constructor(currentId = 0){
         this._products = [];
+
         this._currentId = currentId;
     }
     get products(){
@@ -13,7 +14,7 @@ export class ProductsController{
             name: name,
             description: description,
             imageUrl: imageUrl,
-            price:price
+            price: price
         };
 
         // Push the item to the products property
@@ -30,6 +31,8 @@ export class ProductsController{
             }       
         }
     }
+    
+    
  
 }
 
