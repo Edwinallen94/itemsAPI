@@ -19,6 +19,7 @@ export class ProductsController{
 
         // Push the item to the products property
         this._products.push(item);
+        localStorage.setItem('products',JSON.stringify(this._products));
     }
     loadItemsFromLocalStorage() {
         const storageItems = localStorage.getItem('products');

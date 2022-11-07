@@ -26,23 +26,24 @@ export function addItemCard(item) {
 }
 
 
-// function loadStorageSampleData(){
+/*
+function loadStorageSampleData(){
 
-//   if(!localStorage.getItem("products"))
-//   {
-//     const productItems =[{'name':'Boho Style',
-//     'imageUrl':'../pictures/boho-bedding-urban-bedding.jpg',
-//     'description':'Vibrant boho bedding','price':'Price'},{'name':'Canopy Style',
-//     'imageUrl':'https://www.decorsnob.com/wp-content/uploads/cutest-canopy-bed-I-hung-my-plants-on-it.jpg',
-//     'description':'Elegant canopy bedding','price':'Price'},{'name':'Farmhouse Style',
-//     'imageUrl':'https://i.pinimg.com/564x/8b/d1/82/8bd182012328e66c09f5c7c0db22816b--farmhouse-style-headboard-diy-farmhouse-bed-frame-diy.jpg',
-//     'description':'Wood framhouse bedding','price':'Price'}];
+  if(!localStorage.getItem("products"))
+  {
+    // const productItems =[{'name':'Boho Style',
+    // 'imageUrl':'../pictures/boho-bedding-urban-bedding.jpg',
+    // 'description':'Vibrant boho bedding','price':'Price'},{'name':'Canopy Style',
+    // 'imageUrl':'https://www.decorsnob.com/wp-content/uploads/cutest-canopy-bed-I-hung-my-plants-on-it.jpg',
+    // 'description':'Elegant canopy bedding','price':'Price'},{'name':'Farmhouse Style',
+    // 'imageUrl':'https://i.pinimg.com/564x/8b/d1/82/8bd182012328e66c09f5c7c0db22816b--farmhouse-style-headboard-diy-farmhouse-bed-frame-diy.jpg',
+    // 'description':'Wood framhouse bedding','price':'Price'}];
+    productsController.products();
 
-//     localStorage.setItem("products", JSON.stringify(productItems));
-//   }
-// }
-
-
+    localStorage.setItem("products", JSON.stringify());
+  }
+}
+*/
 
 function loadCardsListFromProductController(){
   for(let i = 0; i < productsController.products.length; i++){
@@ -54,8 +55,8 @@ function loadCardsListFromProductController(){
 }
 
 // loadStorageSampleData();
-productsController.loadItemsFromLocalStorage();
-loadCardsListFromProductController();
+//productsController.loadItemsFromLocalStorage();
+//loadCardsListFromProductController();
 
 
 
