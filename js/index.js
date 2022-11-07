@@ -16,7 +16,7 @@ export function addItemCard(item) {
   </div>
   <div class="card-footer">
     <small class="text-muted" id="new-item-price">${item.price}</small>
-    <div id="list-items></div>
+    
   </div>
 </div>`;
 
