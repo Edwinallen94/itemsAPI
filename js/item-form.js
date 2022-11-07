@@ -1,5 +1,5 @@
 import { ProductsController } from "./itemsController.js";
-
+import { addItemCard } from "./index.js";
 
 
 // Initialize a new ItemsController with currentId set to 0
@@ -14,10 +14,10 @@ newItemForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // Select the inputs
-    const newItemName = document.getElementById('new-item-name');
-    const newItemDescription = document.getElementById('new-item-description');
-    const newItemImageUrl = document.getElementById('new-item-img');    
-    const newItemPrice = document.getElementById('new-item-price');
+    const newItemName = document.getElementById('name');
+    const newItemDescription = document.getElementById('description');
+    const newItemImageUrl = document.getElementById('image-url');    
+    const newItemPrice = document.getElementById('price');
 
     // Get the values of the inputs
     const name = newItemName.value;
@@ -31,6 +31,7 @@ newItemForm.addEventListener('submit', (event) => {
 
     // Add the item to the ItemsController
     newProductsController.addItem(name, description, imageUrl, itemPrice);
+    //addItemCard(newProductsController.addItem(name, description, imageUrl, itemPrice));
 
     // Clear the form
     newItemName.value = '';

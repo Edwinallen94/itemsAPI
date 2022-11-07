@@ -97,6 +97,27 @@
     <br />
 
     <!--<div class="row row-cols-1 row-cols-md-3 g-4 featured-cards" id="list-items"></div> -->
+    <form id="new-item-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <label for="image-url">Image URL</label>
+        <input type="url" class="form-control" id="image-url" placeholder="Image">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Price">
+      </div>
+      <br> <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
   
       <div class="row row-cols-1 row-cols-md-3 g-4 featured-cards" id="list-items"></div>
 
@@ -255,6 +276,7 @@
     </div>
   -->
     <!-- JavaScript Bundle with Popper -->
+    <script src="../js/item-form.js" type="module" defer></script>
     <script src="../js/itemsController.js" type="module" defer></script>
     <script src="../js/index.js" type="module" defer></script>
     <script
@@ -262,7 +284,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/item-form.js" type="module" defer></script>
+    
 
   </body>
 </html>
