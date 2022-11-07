@@ -2,7 +2,7 @@ import {ProductsController} from "./itemsController.js";
 const productsController = new ProductsController(0);
 
 
-function addItemCard(item) {
+export function addItemCard(item) {
   let itemHTML =
   `<div class="card h-100 product-card>
   <img
