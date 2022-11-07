@@ -31,7 +31,8 @@ newItemForm.addEventListener('submit', (event) => {
 
     // Add the item to the ItemsController
     newProductsController.addItem(name, description, imageUrl, itemPrice);
-    //addItemCard(newProductsController.addItem(name, description, imageUrl, itemPrice));
+    newProductsController.loadItemsFromLocalStorage();
+    console.log('Event listener called');
 
     // Clear the form
     newItemName.value = '';
