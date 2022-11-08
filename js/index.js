@@ -4,7 +4,7 @@ const productsController = new ProductsController(0);
 
 export function addItemCard(item) {
   let itemHTML =
-  `<div class="card h-100 product-card>
+  `<div class="card h-100 product-card style="width: 400px">
   <img
     src= "${item.imageUrl}"
     class="card-img-top"
