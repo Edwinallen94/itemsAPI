@@ -32,7 +32,8 @@ newItemForm.addEventListener('submit', (event) => {
     // Add the item to the ItemsController
     newProductsController.addItem(name, description, imageUrl, itemPrice);
     newProductsController.loadItemsFromLocalStorage();
-
+    let itemsContainer = document.getElementById("list-items");
+    itemsContainer.innerHTML ='';
     for(let i = 0; i < newProductsController.products.length; i++)
     {
         addItemCard(newProductsController.products[i]);

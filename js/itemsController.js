@@ -18,6 +18,7 @@ export class ProductsController{
         };
 
         // Push the item to the products property
+        
         this._products.push(item);
         localStorage.setItem('products',JSON.stringify(this._products));
     }
@@ -26,10 +27,10 @@ export class ProductsController{
         if (storageItems) {
             const items = JSON.parse(storageItems);
             //TODO load the items into the local items structure (this.items)   
-            for(let i = 0; i < items.length; i++) {
-                const product = items[i];
-                this._products.push(product);
-            }       
+            // for(let i = 0; i < items.length; i++) {
+            //     const product = items[i];
+            //     this._products.push(product);
+            // }       
         }
     }
     
