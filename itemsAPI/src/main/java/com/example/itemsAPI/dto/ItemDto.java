@@ -1,17 +1,7 @@
-package com.example.itemsAPI.repository.entity;
+package com.example.itemsAPI.dto;
 
-
-import com.example.itemsAPI.dto.ItemDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Item {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+public class ItemDto
+{
 
     private String name;
 
@@ -19,18 +9,14 @@ public class Item {
 
     private String imageUrl;
 
-    public Item(ItemDto itemDto) {
+    public ItemDto( String name, String description, String imageUrl )
+    {
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
     }
 
-
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId( Integer id )
-    {
-        this.id = id;
+    public ItemDto() {
     }
 
     public String getName()
@@ -63,5 +49,3 @@ public class Item {
         this.imageUrl = imageUrl;
     }
 }
-
-
