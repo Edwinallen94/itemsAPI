@@ -1,27 +1,34 @@
 package com.example.itemsAPI;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.ItemService;
+import com.example.itemsAPI.service.ItemService;
 import com.example.itemsAPI.repository.entity.Item;
 import com.example.itemsAPI.dto.ItemDto;
 
+import java.util.List;
 import java.util.Optional;
 
+
 @RestController
-@RequestMapping("/item")
+@RequestMapping(value = "/item")
 public class ItemController{
 
-    final ItemRepository itemRepository;
-    final ItemService itemService;
+
+      private final ItemService itemService;
 
 
-    public ItemController(ItemService itemService, ItemRepository itemRepository)
+
+    public ItemController(ItemService itemService)
     {
-        this.itemRepository = itemRepository;
+
         this.itemService = itemService;
     }
 
-    @GetMapping("/all/items")
-    public Iterable<Item> getItems(){
+
+
+    @GetMapping("/all")
+    public List<Item> getItems(){
         return itemService.all();
     }
     @PostMapping
@@ -34,13 +41,16 @@ public class ItemController{
         return itemService.findById(id);
     }
     @PutMapping( "/{id}" )
-    public Item update( @RequestBody ItemDto itemDto, @PathVariable Integer id )
+    public Optional<Item> update(@RequestBody ItemDto itemDto, @PathVariable Integer id )
     {
-        Optional<Item> item = itemService.findById(id);
-        item.setName( itemDto.getName() );
-        item.setDescription( itemDto.getDescription() );
-        item.setImageUrl( itemDto.getImageUrl() );
-        return itemService.save(item);
+        return itemService.findById(id)
+                .map(item ->{
+                    item.setName(itemDto.getName());
+                    item.setDescription(itemDto.getDescription());
+                    item.setImageUrl(itemDto.getImageUrl());
+                    return itemService.save(item);
+                });
+
     }
 
     @DeleteMapping( "/{id}" )

@@ -20,6 +20,19 @@ public class Item {
     private String imageUrl;
 
     public Item(ItemDto itemDto) {
+        this.name = itemDto.getName();
+        this.description = itemDto.getDescription();
+        this.imageUrl = itemDto.getImageUrl();
+    }
+
+    public Item(Integer id, String name, String description, String imageUrl) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public Item() {
     }
 
 
