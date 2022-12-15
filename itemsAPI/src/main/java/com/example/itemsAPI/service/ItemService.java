@@ -1,5 +1,6 @@
 package com.example.itemsAPI.service;
 
+import com.example.itemsAPI.ItemModelAssembler;
 import com.example.itemsAPI.ItemRepository;
 import com.example.itemsAPI.repository.entity.Item;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,16 +12,21 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Service
 public class ItemService
 {
     @Autowired private ItemRepository itemRepository;
 
-    public ItemService( ItemRepository itemRepository )
+
+
+
+    public ItemService( ItemRepository itemRepository)
     {
         this.itemRepository = itemRepository;
+
     }
 
     public ItemService() {
