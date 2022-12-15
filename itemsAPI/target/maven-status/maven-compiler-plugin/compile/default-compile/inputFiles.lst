@@ -1,0 +1,9 @@
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/dto/ItemDto.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemController.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemNotFoundException.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemNotFoundAdvice.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemModelAssembler.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemsApiApplication.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/ItemRepository.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/repository/entity/Item.java
+/Users/edwinallen/Desktop/IdeaProjects/itemsAPI/itemsAPI/src/main/java/com/example/itemsAPI/service/ItemService.java

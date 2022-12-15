@@ -1,0 +1,9 @@
+com/example/itemsAPI/ItemNotFoundException.class
+com/example/itemsAPI/ItemNotFoundAdvice.class
+com/example/itemsAPI/ItemRepository.class
+com/example/itemsAPI/service/ItemService.class
+com/example/itemsAPI/repository/entity/Item.class
+com/example/itemsAPI/ItemController.class
+com/example/itemsAPI/dto/ItemDto.class
+com/example/itemsAPI/ItemsApiApplication.class
+com/example/itemsAPI/ItemModelAssembler.class
