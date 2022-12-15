@@ -17,7 +17,9 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/item")
+
 public class ItemController{
 
 
@@ -36,7 +38,9 @@ public class ItemController{
 
 
 
+    @CrossOrigin("*")
     @GetMapping("/all")
+
     /*
     public List<Item> getItems(){
         return itemService.all();
@@ -49,17 +53,21 @@ public class ItemController{
 
         return CollectionModel.of(employees, linkTo(methodOn(ItemController.class).all()).withSelfRel());
     }
+
+    @CrossOrigin("*")
     @PostMapping
     public Item save( @RequestBody ItemDto itemDto )
     {
         return itemService.save( new Item( itemDto ) );
     }
+    @CrossOrigin("*")
     @GetMapping("/{id}")
     public EntityModel<Item> findItemById(@PathVariable Integer id ){
         Item item = itemService.findById(id)
                 .orElseThrow(()->new ItemNotFoundException(id));
         return assembler.toModel(item);
     }
+    @CrossOrigin("*")
     @PutMapping( "/{id}" )
     public Item update(@RequestBody ItemDto itemDto, @PathVariable Integer id )
     {
@@ -79,6 +87,7 @@ public class ItemController{
 
     }
 
+    @CrossOrigin("*")
     @DeleteMapping( "/{id}" )
     public void delete( @PathVariable Integer id )
     {
